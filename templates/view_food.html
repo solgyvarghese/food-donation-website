@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Donated Food</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="list-container">
+        <h2>Available Food Donations</h2>
+        <div class="food-grid">
+            {% for food in food_items %}
+                <div class="food-card">
+                    <h3>{{ food[1] }}</h3>
+                    <p><strong>Packets:</strong> {{ food[2] }}</p>
+                    <p><strong>Amount:</strong> {{ food[3] }}</p>
+                    <p><strong>Location:</strong> {{ food[4] }}</p>
+                    <a href="/claim/{{ food[0] }}" class="claim-btn">Claim</a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

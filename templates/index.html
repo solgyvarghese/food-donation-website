@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Donation Platform</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+{% if username %}
+<p>Welcome, {{ username }} | <a href="/logout">Logout</a></p>
+{% else %}
+<a href="/login">Login</a> | <a href="/register">Register</a>
+{% endif %}
+
+    <header>
+        <div class="container">
+            <h1>🍱 FoodShare</h1>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/donate">Donate</a>
+                <a href="/view">View Food</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Turn Your Extra Food into Someone's Lifeline</h2>
+            <p>Donate or collect food with ease and compassion.</p>
+            <a href="/donate" class="btn">Start Donating</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 FoodShare | Built with ❤️ by Solgy</p>
+    </footer>
+</body>
+</html>
